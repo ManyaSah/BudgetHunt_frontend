@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Hunt - Explore Smart Shopping</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: url('https://chargebacks911.com/wp-content/uploads/2023/08/Online-vs-In-Store-Shopping-blog.jpg') center/cover no-repeat fixed;
+            background-color: rgba(39, 19, 4, 0.9); /* Semi-transparent overlay - Really Dark Brown color */
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.5s ease; /* Smooth transition for the background */
+            cursor: url('https://i.imgur.com/1wDx4pE.png'), auto; /* Custom cursor */
+        }
+
+        h1, p {
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Initial position */
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Smooth transition */
+        }
+
+        body.loaded h1, body.loaded p {
+            opacity: 1; /* Visible on load */
+            transform: translateY(0); /* Slide in */
+        }
+
+        h1 {
+            font-size: 8.4em; /* Increased size by 1.4 times */
+            margin-bottom: 5px; /* Reduced margin */
+            margin-top: 20px; /* Moved upwards */
+            color: #f5f5dc;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-left: 20px;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        h1:hover {
+            color: #64b5f2; /* Change color on hover */
+        }
+
+        p {
+            max-width: 600px;
+            margin: 10px 40px; /* Moved towards the right */
+            line-height: 1.5;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white; /* Set the font color to white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow for better visibility */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.7); /* More transparent */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 0 20px;
+            transition: transform 0.3s ease; /* Smooth transform transition */
+        }
+
+        form:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: calc(100% - 12px);
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease; /* Smooth transition for border color */
+        }
+
+        input:focus {
+            border-color: #64b5f2; /* Change border color on focus */
+        }
+
+        button {
+            background-color: #64b5f2;
+            color: #fff;
+            padding: 16px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for the button */
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #4285f4;
+            transform: translateY(-2px); /* Move up slightly on hover */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bargain Hunt</h1>
+
+<p>Embark on a journey of smart shopping with Bargain Hunt! Fill out the form below to track your favorite products on Amazon and receive notifications when prices drop. Uncover the excitement of budget-friendly shopping!</p>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-po1jGJkkp9A59Z6KdCVs7ut6tbX19tp0VsHCp8L2pHbhqw/viewform?embedded=true" width="1100" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add("loaded");
+    });
+
+    document.getElementById("bargainHuntForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Use JavaScript to collect form data and send it to the backend (Python code) for processing.
+        // Example: fetch('your_backend_url', { method: 'POST', body: new FormData(this) });
+    });
+</script>
+
+</body>
+</html>

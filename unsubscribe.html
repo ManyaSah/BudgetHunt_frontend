@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsubscribe Page</title>
+</head>
+<body>
+    <h1>Unsubscribe</h1>
+    <p>This page is for unsubscribing from our service.</p>
+
+    <script>
+        // Function to extract query parameters from URL
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the userId from the URL
+        var user_id = getQueryParam('user_id');
+        if (user_id) {
+            // Call function to process unsubscribe action using userId
+            unsubscribeUser(user_id);
+        } else {
+            // Handle case when userId is not provided
+            console.error('User ID not found in URL');
+        }
+
+        function unsubscribeUser(user_id) {
+            let url = 'https://api.sheety.co/459bcd038f36ffc952b27b5a90e867ef/contactInformation (responses)/formResponses1/'+user_id;
+            fetch(url, {
+            method: 'DELETE',
+            })
+            .then((response) => response.json())
+            .then(() => {
+            console.log('Object deleted');
+            });
+        }
+    </script>
+</body>
+</html>
