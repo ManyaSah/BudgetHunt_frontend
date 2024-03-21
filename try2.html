@@ -236,7 +236,6 @@
             <div class="content" style="text-align: left;margin-left: 3%;padding: 0%; color: orangered">
                 <!-- FAQ Section Content -->
                 <h2 style="font-size: 400%;">FAQ's</h2>
-                <br>
                 <div id="faq-content" style="font-size: 85%; color: #772222">
                     <!-- FAQ content will be dynamically added here -->
                 </div>
@@ -251,6 +250,7 @@
                     <input type="text" id="question" name="question" required><br><br>
                     <button type="submit" class="cn1" style="background-color: orangered;">Enter</button>
                 </form>
+                <p>Your question is submitted! We'll get back to you soon.</p>
                 <!-- Link to other webpage -->
                 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
             </div>
@@ -301,7 +301,7 @@
         fetch(url)
             .then(response => response.json())
             .then(json => {
-                let faqData = json.sheet1.slice(Math.max(json.sheet1.length - 7, 0));
+                let faqData = json.sheet1.slice(Math.max(json.sheet1.length - 10, 0));
                 let faqContentDiv = document.getElementById('faq-content');
 
                 faqData.forEach(faqItem => {
@@ -356,7 +356,7 @@
                     // Clear the form after successful submission if needed
                     document.getElementById('question').value = '';
                     // You can add further actions as needed
-                    window.location.href = "index.html";
+                    window.location.href = "try2.html";
                 })
                 .catch(error => {
                     console.error('Error sending user question:', error);
